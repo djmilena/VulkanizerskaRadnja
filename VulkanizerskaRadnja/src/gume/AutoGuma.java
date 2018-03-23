@@ -150,6 +150,7 @@ public class AutoGuma {
 
 	/**
 	 * Vraca logicku vrednost izraza koji uporedjuje dva objekta klase AutoGuma. 
+	 * Dva objekta ove klase su jednaka ako su im jednaki precnici, sirine, visine i markaModel.
 	 * @return true ako su dva objekta ove klase jednaka, u suprotnom false
 	 */
 	@Override

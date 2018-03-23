@@ -90,7 +90,14 @@ public class VulkanizerskaRadnjaTest {
 	 */
 	@Test
 	public void testPronadjiGumu() {
-		v.pronadjiGumu(a.getMarkaModel());
+		a.setPrecnik(14);
+		a.setSirina(136);
+		a.setVisina(26);
+		a.setMarkaModel("Tigar");
+		v.dodajGumu(a);
+		LinkedList<AutoGuma> novaLista = v.pronadjiGumu("Tigar");
+		
+		assertTrue(novaLista.contains(a));
 	}
 	
 	@Test
@@ -99,6 +106,7 @@ public class VulkanizerskaRadnjaTest {
 	}
 	@Test
 	public void testPronadjiGumuNemaJe() {
-		v.pronadjiGumu("tr");
+		LinkedList<AutoGuma> novaLista = v.pronadjiGumu("tr");
+		assertFalse(novaLista.contains(a));
 	}
 }
